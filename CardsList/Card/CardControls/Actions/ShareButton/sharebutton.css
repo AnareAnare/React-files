@@ -1,0 +1,103 @@
+.text {
+    display: none;
+    color: var(--grey99);
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 16px;
+}
+
+.mobileIcon {
+    display: inline-block;
+}
+
+.desktopIcon {
+    display: none;
+}
+
+.comm {
+    padding: 10px 0 10px 20px;
+}
+
+.shareButton.comm::after {
+    background-color: transparent;
+}
+
+.comm .desktopIcon {
+    display: inline-block;
+    transform: translateY(3px);
+}
+
+.comm .mobileIcon {
+    display: none;
+}
+
+.comm .text {
+    display: inline;
+    padding-left: 5px;
+}
+
+@media all and (min-width: 1024px) {
+    .dd {
+        display: none;
+    }
+}
+
+@media all and (min-width: 320px) and (max-width: 1023px) {
+    .md {
+        display: none;
+    }
+}
+
+@media all and (min-width: 1024px) {
+    .mobileIcon {
+        display: none;
+    }
+
+    .shareButton {
+        display: block;
+        position: relative;
+        width: 100%;
+        padding: 10px 0 10px 20px;
+        text-align: left;
+    }
+
+    .desktopIcon {
+        display: inline-block;
+        transform: translateY(3px);
+    }
+
+    .shareButton::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 20px;
+        height: 1px;
+        width: 80%;
+        background-color: var(--greyEC);
+    }
+
+    .text {
+        display: inline;
+        padding-left: 10px;
+    }
+
+    .shareButton:focus .text,
+    .shareButton:active .text {
+        color: var(--orange);
+    }
+
+    .shareButton:focus svg path,
+    .shareButton:active svg path {
+        fill: var(--orange);
+    }
+}
+
+@media all and (min-width: 1540px) {
+    .shareButton:hover svg path {
+        fill: var(--orange);
+    }
+
+    .shareButton:hover .text {
+        color: var(--orange);
+    }
+}

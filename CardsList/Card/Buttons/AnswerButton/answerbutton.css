@@ -1,0 +1,39 @@
+.text {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 16px;
+    color: var(--grey99);
+    padding-left: 5px;
+}
+
+.answer {
+    display: flex;
+    align-items: normal;
+    padding: 10px 0 0 0;
+}
+
+.answer svg {
+    transform: translateY(2px);
+}
+
+.answer:focus .text,
+.answer:active .text {
+    color: var(--orange);
+}
+
+.answer:focus svg path,
+.answer:active svg path {
+    fill: var(--orange);
+}
+
+@media all and (min-width: 1540px) {
+    .answer:hover svg path {
+        fill: var(--orange);
+    }
+
+    .answer:hover .text {
+        color: var(--orange);
+    }
+}

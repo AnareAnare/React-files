@@ -1,0 +1,56 @@
+.complainButton {
+    display: block;
+    position: relative;
+    width: 100%;
+    padding: 10px 0 10px 20px;
+    text-align: left;
+}
+
+.complainButton svg {
+    transform: translateY(2px);
+}
+
+.text {
+    padding-left: 10px;
+    color: var(--grey99);
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 14px;
+}
+
+.comm .text {
+    padding-left: 5px;
+    font-size: 14px;
+    line-height: 16px;
+}
+
+.complainButton:focus .text,
+.complainButton:active .text {
+    color: var(--orange);
+}
+
+.complainButton:focus svg path,
+.complainButton:active svg path {
+    fill: var(--orange);
+}
+
+@media all and (min-width: 1024px) {
+    .text {
+        font-size: 14px;
+        line-height: 16px;
+    }
+
+    .complainButton svg {
+        transform: translateY(3px);
+    }
+}
+
+@media all and (min-width: 1540px) {
+    .complainButton:hover svg path {
+        fill: var(--orange);
+    }
+
+    .complainButton:hover .text {
+        color: var(--orange);
+    }
+}

@@ -1,0 +1,59 @@
+.hideButton {
+    position: relative;
+    width: 100%;
+    padding: 10px 0 10px 20px;
+    text-align: left;
+}
+
+.hideButton::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 20px;
+    height: 1px;
+    width: 80%;
+    background-color: var(--greyEC);
+}
+
+.hideButton svg {
+    transform: translateY(2px);
+}
+
+.text {
+    padding-left: 10px;
+    color: var(--grey99);
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 14px;
+}
+
+.hideButton:focus .text,
+.hideButton:active .text {
+    color: var(--orange);
+}
+
+.hideButton:focus svg path,
+.hideButton:active svg path {
+    fill: var(--orange);
+}
+
+@media all and (min-width: 1024px) {
+    .text {
+        font-size: 14px;
+        line-height: 16px;
+    }
+
+    .hideButton svg {
+        transform: translateY(3px);
+    }
+}
+
+@media all and (min-width: 1540px) {
+    .hideButton:hover svg path {
+        fill: var(--orange);
+    }
+
+    .hideButton:hover .text {
+        color: var(--orange);
+    }
+}
